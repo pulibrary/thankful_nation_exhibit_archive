@@ -3,6 +3,12 @@ description = An Exhibit Bootstrap Sub-theme.
 core = 7.x
 base theme = bootstrap
 
+;;;;;;;;;;;;;;;;;;;;;
+;; Fonts
+;;;;;;;;;;;;;;;;;;;;;
+
+fonts[google_fonts_api][] = "Alice&subset=latin#regular"
+fonts[google_fonts_api][] = "Goudy Bookletter 1911&subset=latin#regular"
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Regions

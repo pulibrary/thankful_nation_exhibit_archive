@@ -2,3 +2,120 @@
  * This file should get overwritten if Method 1 is used. If Method 2 is chosen,
  * remove this comment and start adding your styles to this file.
  */
+
+/* bootstrap overrides */
+.navbar-default {
+    background-color: #000;
+    border-color: #222;
+}
+
+.navbar-brand {
+    float: none;
+    color: #ffbe9d;
+}
+
+.navbar-header {
+    float: none;
+}
+
+.pane-menu-menu-exhibit-top-level-case-menu .nav {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0px 1px 0px #FFF;
+    background-color: #F7F5FA;
+    border-radius: 5px;
+}
+
+.pane-menu-menu-exhibit-top-level-case-menu .nav > li > a:hover, .nav > li > a:focus, .nav > li.active {
+    text-decoration: none;
+    background-color: #EEE;
+}
+
+
+.pane-menu-menu-exhibit-top-level-case-menu .nav a:hover, a:focus, a.active {
+    color: #2A6496;
+}
+
+.pane-custom {
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-top-color: #222;
+    border-bottom-color: #222;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pane-custom > h2.pane-title {
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+
+/* bootstrap drupal overrides  af7461 */
+
+.panel-2col .panel-col-last .view-grouping-header{
+    color: #215E21; /* forest green */
+    color: #af7461; /* williamsburg red */
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1.8em;
+    font-weight: 500;
+    line-height: 1.1;
+
+}
+
+.panel-2col .panel-col-last .view-grouping-content h3{
+    font-family: "Alice",serif;
+    font-size: 1.0em;
+    line-height: 1.4em;
+    color: #222;
+}
+
+.panel-2col .panel-col-last p{
+    font-family: "Alice",serif;
+    font-size: 1.4em;
+    line-height: 1.8em;
+    color: #222;
+    margin: 20px 75px 0px 75px;
+}
+
+
+
+.panel-2col .panel-col-first {
+    float: left;
+    width: 25%;
+}
+
+.panel-2col .panel-col-last {
+    float: left;
+    width: 75%;
+}
+
+
+/* new classes */
+
+.name {
+    font-family: "Goudy Bookletter 1911",serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #ffbe9d !important;
+    font-size: 42px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lead {
+    font-family: "Goudy Bookletter 1911",serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-size: 24px;
+    display: block;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: #fff;
+}
