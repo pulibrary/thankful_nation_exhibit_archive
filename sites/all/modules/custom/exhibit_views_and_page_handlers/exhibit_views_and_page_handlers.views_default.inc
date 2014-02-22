@@ -29,8 +29,44 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'grid';
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_exhibit_image_one' => 'field_exhibit_image_one',
+    'field_exhibit_image_two' => 'field_exhibit_image_two',
+    'field_exhibit_sort_order' => 'field_exhibit_sort_order',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_exhibit_image_one' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_exhibit_image_two' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_exhibit_sort_order' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_exhibit_sub_case_grouping_target_id']['id'] = 'field_exhibit_sub_case_grouping_target_id';
   $handler->display->display_options['relationships']['field_exhibit_sub_case_grouping_target_id']['table'] = 'field_data_field_exhibit_sub_case_grouping';
@@ -102,6 +138,15 @@ function exhibit_views_and_page_handlers_views_default_views() {
   /* Display: All Imported Items */
   $handler = $view->new_display('page', 'All Imported Items', 'page_1');
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Exhibit Sort order */
+  $handler->display->display_options['fields']['field_exhibit_sort_order']['id'] = 'field_exhibit_sort_order';
+  $handler->display->display_options['fields']['field_exhibit_sort_order']['table'] = 'field_data_field_exhibit_sort_order';
+  $handler->display->display_options['fields']['field_exhibit_sort_order']['field'] = 'field_exhibit_sort_order';
+  $handler->display->display_options['fields']['field_exhibit_sort_order']['label'] = 'Order';
+  $handler->display->display_options['fields']['field_exhibit_sort_order']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -128,15 +173,6 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_image_two']['settings'] = array(
     'image_style' => 'thumbnail',
     'image_link' => '',
-  );
-  /* Field: Content: Exhibit Sort order */
-  $handler->display->display_options['fields']['field_exhibit_sort_order']['id'] = 'field_exhibit_sort_order';
-  $handler->display->display_options['fields']['field_exhibit_sort_order']['table'] = 'field_data_field_exhibit_sort_order';
-  $handler->display->display_options['fields']['field_exhibit_sort_order']['field'] = 'field_exhibit_sort_order';
-  $handler->display->display_options['fields']['field_exhibit_sort_order']['label'] = 'Order';
-  $handler->display->display_options['fields']['field_exhibit_sort_order']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
   );
   $handler->display->display_options['path'] = 'items';
 
