@@ -30,7 +30,7 @@ function landing_page_case_listings_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Entity Reference: Referencing entity */
   $handler->display->display_options['relationships']['reverse_field_exhibit_case_list_node']['id'] = 'reverse_field_exhibit_case_list_node';
