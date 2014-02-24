@@ -323,19 +323,23 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'responsive_grid';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
       'field' => 'field_exhibit_case_title',
       'rendered' => 1,
-      'rendered_strip' => 1,
+      'rendered_strip' => 0,
     ),
     1 => array(
       'field' => 'body',
       'rendered' => 1,
-      'rendered_strip' => 1,
+      'rendered_strip' => 0,
     ),
   );
+  $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['style_options']['wrapper_classes'] = 'row';
+  $handler->display->display_options['style_options']['column_classes'] = 'views-column thumbnail col-md-3';
+  $handler->display->display_options['style_options']['row_classes'] = 'views-row row';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Entity Reference: Referencing entity */
   $handler->display->display_options['relationships']['reverse_field_exhibit_sub_cases_node']['id'] = 'reverse_field_exhibit_sub_cases_node';
@@ -349,7 +353,7 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_case_title']['id'] = 'field_exhibit_case_title';
   $handler->display->display_options['fields']['field_exhibit_case_title']['table'] = 'field_data_field_exhibit_case_title';
   $handler->display->display_options['fields']['field_exhibit_case_title']['field'] = 'field_exhibit_case_title';
-  $handler->display->display_options['fields']['field_exhibit_case_title']['label'] = 'Sub Case Title';
+  $handler->display->display_options['fields']['field_exhibit_case_title']['label'] = '';
   $handler->display->display_options['fields']['field_exhibit_case_title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibit_case_title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['field_exhibit_case_title']['element_label_colon'] = FALSE;
@@ -366,10 +370,10 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = 'Case Description';
+  $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_type'] = 'p';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['element_wrapper_type'] = 'p';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
@@ -395,6 +399,8 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['relationship'] = 'reverse_field_exhibit_sub_case_grouping_node';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['label'] = '';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_class'] = 'caption';
   /* Sort criterion: Content: Title */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
