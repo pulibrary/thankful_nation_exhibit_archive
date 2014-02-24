@@ -6,6 +6,7 @@ version = 7.x-1.0-dev
 project = case_only_items
 dependencies[] = views
 dependencies[] = views_content
+dependencies[] = views_responsive_grid
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[views_view][] = exhibit_items_top_level_cases
