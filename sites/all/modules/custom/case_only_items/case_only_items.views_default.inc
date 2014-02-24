@@ -91,6 +91,11 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'exhibit_rbsc_item' => 'exhibit_rbsc_item',
   );
+  /* Filter criterion: Content: Sub Case Grouping (field_exhibit_sub_case_grouping) */
+  $handler->display->display_options['filters']['field_exhibit_sub_case_grouping_target_id']['id'] = 'field_exhibit_sub_case_grouping_target_id';
+  $handler->display->display_options['filters']['field_exhibit_sub_case_grouping_target_id']['table'] = 'field_data_field_exhibit_sub_case_grouping';
+  $handler->display->display_options['filters']['field_exhibit_sub_case_grouping_target_id']['field'] = 'field_exhibit_sub_case_grouping_target_id';
+  $handler->display->display_options['filters']['field_exhibit_sub_case_grouping_target_id']['operator'] = 'empty';
 
   /* Display: Top Level Case Items Only */
   $handler = $view->new_display('panel_pane', 'Top Level Case Items Only', 'panel_pane_1');
