@@ -91,7 +91,7 @@ function landing_page_case_listings_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Top Level Case Display', 'panel_pane_1');
   $handler->display->display_options['argument_input'] = array(
     'nid' => array(
-      'type' => 'panel',
+      'type' => 'user',
       'context' => 'entity:comment.author',
       'context_optional' => 0,
       'panel' => '0',
