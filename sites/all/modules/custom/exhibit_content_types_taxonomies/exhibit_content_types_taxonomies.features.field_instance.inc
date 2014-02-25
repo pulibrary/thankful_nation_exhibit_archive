@@ -799,6 +799,62 @@ function exhibit_content_types_taxonomies_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-exhibit_rbsc_item-field_map_thumbnail'
+  $field_instances['node-exhibit_rbsc_item-field_map_thumbnail'] = array(
+    'bundle' => 'exhibit_rbsc_item',
+    'deleted' => 0,
+    'description' => 'This is where you add a thumbnail when an image will be viewed on the GIS server.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_map_thumbnail',
+    'label' => 'Map Thumbnail',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-exhibit_subcase-body'
   $field_instances['node-exhibit_subcase-body'] = array(
     'bundle' => 'exhibit_subcase',
@@ -1075,6 +1131,7 @@ function exhibit_content_types_taxonomies_field_default_field_instances() {
   t('Item Type of Resource');
   t('Item URL');
   t('Label of the Case Grouping. For use in sorting and grouping resources. ');
+  t('Map Thumbnail');
   t('Master case item is part of.');
   t('Numeric order the item appears in the overall exhibit manifest.');
   t('Source');
@@ -1085,6 +1142,7 @@ function exhibit_content_types_taxonomies_field_default_field_instances() {
   t('The case label number. Usually numeric but can be a letter. ');
   t('The sub-title of the exhibit if needed.');
   t('The title of the case. Will be used as the display title wherever the case is reference. ');
+  t('This is where you add a thumbnail when an image will be viewed on the GIS server.');
   t('Title of the Subcase');
   t('URL a representation of the item lives at on the web. Typically used for maps in the GIS server or items in the PUDL. ');
   t('Use for observe coin images or any other primary representations of the resource. ');
