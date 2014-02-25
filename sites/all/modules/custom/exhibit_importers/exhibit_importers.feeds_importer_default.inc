@@ -38,7 +38,7 @@ function exhibit_importers_feeds_importer_default() {
     'processor' => array(
       'plugin_key' => 'FeedsNodeProcessor',
       'config' => array(
-        'expire' => '10800',
+        'expire' => '-1',
         'author' => '1',
         'authorize' => 1,
         'mappings' => array(
