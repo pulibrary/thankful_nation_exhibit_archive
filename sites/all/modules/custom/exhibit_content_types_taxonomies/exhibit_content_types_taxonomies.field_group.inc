@@ -57,7 +57,8 @@ function exhibit_content_types_taxonomies_field_group_info() {
       1 => 'field_exhibit_item_type',
       2 => 'field_exhibit_item_source',
       3 => 'field_exhibit_item_url',
-      4 => 'title',
+      4 => 'field_map_thumbnail',
+      5 => 'title',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
