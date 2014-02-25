@@ -451,7 +451,7 @@ function exhibit_views_and_page_handlers_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '%node:field-exhibit-case-title - %node:field-exhibit-case-number';
+  $display->title = '%node:field-exhibit-case-title';
   $display->uuid = '3632494f-a8e6-4a04-8171-44616cac83b2';
   $display->content = array();
   $display->panels = array();
