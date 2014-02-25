@@ -97,6 +97,10 @@
     text-align: center;
 }
 
+.thumbnail .views-field-field-map-thumbnail {
+    text-align: center;
+}
+
 .thumbnail .views-field-field-exhibit-image-one-caption {
     font-size: smaller;
 }
@@ -105,6 +109,10 @@
     margin:20px;
     border: 1px solid #184618;
     background-color: #DDD;
+}
+
+.rbsc-historic-map {
+    font-size: smaller;
 }
 
 .views-responsive-grid-horizontal {
