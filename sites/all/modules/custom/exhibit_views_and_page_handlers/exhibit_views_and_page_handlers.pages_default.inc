@@ -664,7 +664,7 @@ function exhibit_views_and_page_handlers_default_page_manager_handlers() {
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'search-form';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 0,

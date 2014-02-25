@@ -30,6 +30,9 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'responsive_grid';
   $handler->display->display_options['style_options']['columns'] = '3';
+  $handler->display->display_options['style_options']['wrapper_classes'] = 'row';
+  $handler->display->display_options['style_options']['column_classes'] = 'views-column thumbnail col-md-3';
+  $handler->display->display_options['style_options']['row_classes'] = 'views-row row';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_exhibit_case_target_id']['id'] = 'field_exhibit_case_target_id';
@@ -56,6 +59,7 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_image_one']['field'] = 'field_exhibit_image_one';
   $handler->display->display_options['fields']['field_exhibit_image_one']['label'] = '';
   $handler->display->display_options['fields']['field_exhibit_image_one']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibit_image_one']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_exhibit_image_one']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_exhibit_image_one']['type'] = 'colorbox';
   $handler->display->display_options['fields']['field_exhibit_image_one']['settings'] = array(
@@ -72,19 +76,9 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['field'] = 'field_exhibit_image_one_caption';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['label'] = '';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_label_colon'] = FALSE;
-  /* Field: Content: Item URL */
-  $handler->display->display_options['fields']['field_exhibit_item_url']['id'] = 'field_exhibit_item_url';
-  $handler->display->display_options['fields']['field_exhibit_item_url']['table'] = 'field_data_field_exhibit_item_url';
-  $handler->display->display_options['fields']['field_exhibit_item_url']['field'] = 'field_exhibit_item_url';
-  $handler->display->display_options['fields']['field_exhibit_item_url']['label'] = '';
-  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['text'] = 'View Historic Map - [title]';
-  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['path'] = '[field_exhibit_item_url-url]';
-  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['alt'] = '[title]';
-  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['link_class'] = 'rbsc-historic-map';
-  $handler->display->display_options['fields']['field_exhibit_item_url']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_exhibit_item_url']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_class'] = 'caption';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['hide_empty'] = TRUE;
   /* Field: Content: Image Two */
   $handler->display->display_options['fields']['field_exhibit_image_two']['id'] = 'field_exhibit_image_two';
   $handler->display->display_options['fields']['field_exhibit_image_two']['table'] = 'field_data_field_exhibit_image_two';
@@ -108,6 +102,39 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_image_two_caption']['label'] = '';
   $handler->display->display_options['fields']['field_exhibit_image_two_caption']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_exhibit_image_two_caption']['element_label_colon'] = FALSE;
+  /* Field: Content: Map Thumbnail */
+  $handler->display->display_options['fields']['field_map_thumbnail']['id'] = 'field_map_thumbnail';
+  $handler->display->display_options['fields']['field_map_thumbnail']['table'] = 'field_data_field_map_thumbnail';
+  $handler->display->display_options['fields']['field_map_thumbnail']['field'] = 'field_map_thumbnail';
+  $handler->display->display_options['fields']['field_map_thumbnail']['label'] = '';
+  $handler->display->display_options['fields']['field_map_thumbnail']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_map_thumbnail']['alter']['text'] = '[field_map_thumbnail]';
+  $handler->display->display_options['fields']['field_map_thumbnail']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_map_thumbnail']['alter']['path'] = '[field_exhibit_item_url-url]';
+  $handler->display->display_options['fields']['field_map_thumbnail']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_map_thumbnail']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_map_thumbnail']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_map_thumbnail']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  /* Field: Content: Item URL */
+  $handler->display->display_options['fields']['field_exhibit_item_url']['id'] = 'field_exhibit_item_url';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['table'] = 'field_data_field_exhibit_item_url';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['field'] = 'field_exhibit_item_url';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['text'] = 'View Historic Map - [title]';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['path'] = '[field_exhibit_item_url-url]';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['alt'] = '[title]';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['link_class'] = 'rbsc-historic-map';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['target'] = '_blank';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibit_item_url']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['element_wrapper_class'] = 'caption';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_item_url']['click_sort_column'] = 'url';
   /* Sort criterion: Content: Exhibit Sort order (field_exhibit_sort_order) */
   $handler->display->display_options['sorts']['field_exhibit_sort_order_value']['id'] = 'field_exhibit_sort_order_value';
   $handler->display->display_options['sorts']['field_exhibit_sort_order_value']['table'] = 'field_data_field_exhibit_sort_order';

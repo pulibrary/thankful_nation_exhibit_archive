@@ -397,15 +397,6 @@ function exhibit_views_and_page_handlers_views_default_views() {
     'colorbox_caption' => 'auto',
     'colorbox_caption_custom' => '',
   );
-  /* Field: Content: Image One Caption */
-  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['id'] = 'field_exhibit_image_one_caption';
-  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['table'] = 'field_data_field_exhibit_image_one_caption';
-  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['field'] = 'field_exhibit_image_one_caption';
-  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['relationship'] = 'reverse_field_exhibit_sub_case_grouping_node';
-  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['label'] = '';
-  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_type'] = 'div';
-  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_class'] = 'caption';
   /* Field: Content: Image Two */
   $handler->display->display_options['fields']['field_exhibit_image_two']['id'] = 'field_exhibit_image_two';
   $handler->display->display_options['fields']['field_exhibit_image_two']['table'] = 'field_data_field_exhibit_image_two';
@@ -423,6 +414,15 @@ function exhibit_views_and_page_handlers_views_default_views() {
     'colorbox_caption' => 'auto',
     'colorbox_caption_custom' => '',
   );
+  /* Field: Content: Image One Caption */
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['id'] = 'field_exhibit_image_one_caption';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['table'] = 'field_data_field_exhibit_image_one_caption';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['field'] = 'field_exhibit_image_one_caption';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['relationship'] = 'reverse_field_exhibit_sub_case_grouping_node';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_class'] = 'caption';
   /* Field: Content: Image Two Caption */
   $handler->display->display_options['fields']['field_exhibit_image_two_caption']['id'] = 'field_exhibit_image_two_caption';
   $handler->display->display_options['fields']['field_exhibit_image_two_caption']['table'] = 'field_data_field_exhibit_image_two_caption';
