@@ -131,8 +131,9 @@
 
 }
 
-
-
+.views-field-field-exhibit-image-two {
+  display: none;   
+}
 
 .view-id-subcase_view .views-row {
     padding-left: 20px;
