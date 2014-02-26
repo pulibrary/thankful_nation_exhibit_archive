@@ -107,16 +107,13 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['fields']['field_map_thumbnail']['table'] = 'field_data_field_map_thumbnail';
   $handler->display->display_options['fields']['field_map_thumbnail']['field'] = 'field_map_thumbnail';
   $handler->display->display_options['fields']['field_map_thumbnail']['label'] = '';
-  $handler->display->display_options['fields']['field_map_thumbnail']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_map_thumbnail']['alter']['text'] = '[field_map_thumbnail]';
-  $handler->display->display_options['fields']['field_map_thumbnail']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_map_thumbnail']['alter']['path'] = '[field_exhibit_item_url-url]';
+  $handler->display->display_options['fields']['field_map_thumbnail']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_map_thumbnail']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_map_thumbnail']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_map_thumbnail']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_map_thumbnail']['settings'] = array(
     'image_style' => 'thumbnail',
-    'image_link' => 'content',
+    'image_link' => '',
   );
   /* Field: Content: Item URL */
   $handler->display->display_options['fields']['field_exhibit_item_url']['id'] = 'field_exhibit_item_url';
@@ -124,8 +121,11 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_item_url']['field'] = 'field_exhibit_item_url';
   $handler->display->display_options['fields']['field_exhibit_item_url']['label'] = '';
   $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['text'] = 'View Historic Map - [title]';
-  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['text'] = '
+<a href="[field_exhibit_item_url-url]" title="[title]" target="_blank">[field_map_thumbnail]</a>
+<div>
+[title] 
+</div>';
   $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['path'] = '[field_exhibit_item_url-url]';
   $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['alt'] = '[title]';
   $handler->display->display_options['fields']['field_exhibit_item_url']['alter']['link_class'] = 'rbsc-historic-map';
@@ -135,6 +135,7 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_item_url']['element_wrapper_class'] = 'caption';
   $handler->display->display_options['fields']['field_exhibit_item_url']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_exhibit_item_url']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_exhibit_item_url']['type'] = 'link_plain';
   /* Sort criterion: Content: Exhibit Sort order (field_exhibit_sort_order) */
   $handler->display->display_options['sorts']['field_exhibit_sort_order_value']['id'] = 'field_exhibit_sort_order_value';
   $handler->display->display_options['sorts']['field_exhibit_sort_order_value']['table'] = 'field_data_field_exhibit_sort_order';
