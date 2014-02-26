@@ -97,8 +97,14 @@
     text-align: center;
 }
 
-.thumbnail .views-field-field-map-thumbnail {
-    text-align: center;
+.views-field-field-exhibit-item-url {
+    text-align: center;   
+}
+
+.views-field-field-exhibit-item-url > .field-content > div {
+    text-align: left;
+    font-size: smaller;
+    margin-top: 10px;
 }
 
 .thumbnail .views-field-field-exhibit-image-one-caption {
