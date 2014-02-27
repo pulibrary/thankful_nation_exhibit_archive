@@ -53,6 +53,15 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Field: Content: Source */
+  $handler->display->display_options['fields']['field_exhibit_item_source']['id'] = 'field_exhibit_item_source';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['table'] = 'field_data_field_exhibit_item_source';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['field'] = 'field_exhibit_item_source';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_item_source']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_item_source']['alter']['text'] = '([field_exhibit_item_source])';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['element_label_colon'] = FALSE;
   /* Field: Content: Image One */
   $handler->display->display_options['fields']['field_exhibit_image_one']['id'] = 'field_exhibit_image_one';
   $handler->display->display_options['fields']['field_exhibit_image_one']['table'] = 'field_data_field_exhibit_image_one';
@@ -75,6 +84,8 @@ function case_only_items_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['table'] = 'field_data_field_exhibit_image_one_caption';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['field'] = 'field_exhibit_image_one_caption';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['alter']['text'] = '[field_exhibit_image_one_caption] [field_exhibit_item_source] ';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_class'] = 'caption';
