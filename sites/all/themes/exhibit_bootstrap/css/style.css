@@ -83,6 +83,28 @@
 }
 
 
+/*
+.pane-menu-menu-exhibit-top-level-case-menu {
+
+}
+*/
+
+.pane-node-body .view-grouping-content h3 {
+    font-family: "Alice",serif;
+    font-size: 1.4em;
+    line-height: 1.8em;
+    color: #222;
+    margin: 20px 75px 0px 75px;
+}
+
+.pane-node-body p {
+    font-family: "Alice",serif;
+    font-size: 1.4em;
+    line-height: 1.8em;
+    color: #222;
+    margin: 20px 75px 0px 75px;
+}
+
 .panel-2col .panel-col-first {
     float: left;
     width: 25%;
@@ -161,6 +183,9 @@
 }
 
 /* new classes */
+.menu-button {
+    margin-bottom: 10px;    
+}
 
 .name {
     font-family: "Goudy Bookletter 1911",serif;
