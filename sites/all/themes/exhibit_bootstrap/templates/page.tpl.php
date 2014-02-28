@@ -81,7 +81,7 @@
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
-
+      <div class="title-group">
       <?php if (!empty($site_name)): ?>
       <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
@@ -89,6 +89,7 @@
       <?php if (!empty($site_slogan)): ?>
         <p class="lead"><?php print $site_slogan; ?></p>
       <?php endif; ?>
+      </div>
 
       <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
       <!--

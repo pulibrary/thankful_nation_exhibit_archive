@@ -168,7 +168,7 @@
 
 .name {
     display: block;
-    float: left;
+    text-align: left;
     font-family: "Goudy Bookletter 1911",serif;
     font-weight: 500;
     line-height: 1.1;
@@ -181,7 +181,7 @@
 
 .lead {
     display: block;
-    float: left;
+    text-align: left;
     font-family: "Goudy Bookletter 1911",serif;
     font-weight: 500;
     line-height: 1.1;
@@ -193,7 +193,19 @@
     color: #fff;
 }
 
+.title-group {
+        margin-left: 140px;
+}
+
+
 @media(max-width:768px){
+
+    .title-group {
+        margin-left: 0;
+    }
+    .lead, .name {
+	text-align: center;
+    }
        
     #navbar {
         margin-top: -10px;   
