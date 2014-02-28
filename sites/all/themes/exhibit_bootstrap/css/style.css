@@ -105,6 +105,36 @@
     margin: 20px 75px 0px 75px;
 }
 
+@media(max-width:768px){
+       
+    .pane-node-body p {
+        font-family: "Alice",serif;
+        font-size: 1.4em;
+        line-height: 1.8em;
+        color: #222;
+        margin: 20px 10px 0px 10px;
+    }
+    
+    .pane-subcase-view-panel-pane-1 .view-grouping-content h3 {
+        font-family: "Alice",serif;
+        font-size: 1.4em;
+        line-height: 1.8em;
+        color: #222;
+        margin: 20px 10px 0px 10px;
+    }
+    
+    .pane-subcase-view-panel-pane-1 .view-grouping-header{
+        color: #215E21; /* forest green */
+        color: #af7461; /* williamsburg red */
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 1.8em;
+        font-weight: 500;
+        line-height: 1.1;
+        margin-left: 10px;
+    }
+    
+}
+
 .panel-2col .panel-col-first {
     float: left;
     width: 25%;
