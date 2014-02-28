@@ -106,9 +106,6 @@
 }
 
 @media(max-width:768px){
-    .lead{
-            font-size:14px;
-    }
        
     .pane-node-body p {
         font-family: "Alice",serif;
