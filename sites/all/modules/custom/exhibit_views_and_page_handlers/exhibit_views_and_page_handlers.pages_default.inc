@@ -724,7 +724,7 @@ function exhibit_views_and_page_handlers_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => 'Exhibition Cases',
+      'override_title_text' => 'Exhibition Menu',
     );
     $pane->cache = array();
     $pane->style = array(
