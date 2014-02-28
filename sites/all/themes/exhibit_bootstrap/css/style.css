@@ -57,7 +57,7 @@
 
 /* bootstrap drupal overrides  af7461 */
 
-.panel-2col .panel-col-last .view-grouping-header{
+.pane-subcase-view-panel-pane-1 .view-grouping-header{
     color: #215E21; /* forest green */
     color: #af7461; /* williamsburg red */
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -66,15 +66,15 @@
     line-height: 1.1;
     margin-left: 50px;
 }
-
-.panel-2col .panel-col-last .view-grouping-content h3{
+/*
+.pane-node-body .view-grouping-content h3{
     font-family: "Alice",serif;
     font-size: 1.0em;
     line-height: 1.4em;
     color: #222;
 }
 
-.panel-2col .panel-col-last p{
+.pane-node-body p{
     font-family: "Alice",serif;
     font-size: 1.4em;
     line-height: 1.8em;
@@ -83,13 +83,13 @@
 }
 
 
-/*
+
 .pane-menu-menu-exhibit-top-level-case-menu {
 
 }
 */
 
-.pane-node-body .view-grouping-content h3 {
+.pane-subcase-view-panel-pane-1 .view-grouping-content h3 {
     font-family: "Alice",serif;
     font-size: 1.4em;
     line-height: 1.8em;
