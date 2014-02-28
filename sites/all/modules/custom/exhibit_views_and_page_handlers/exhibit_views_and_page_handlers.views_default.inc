@@ -154,6 +154,21 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Case  */
+  $handler->display->display_options['fields']['field_exhibit_case']['id'] = 'field_exhibit_case';
+  $handler->display->display_options['fields']['field_exhibit_case']['table'] = 'field_data_field_exhibit_case';
+  $handler->display->display_options['fields']['field_exhibit_case']['field'] = 'field_exhibit_case';
+  $handler->display->display_options['fields']['field_exhibit_case']['settings'] = array(
+    'link' => 1,
+  );
+  /* Field: Content: Sub Case Grouping */
+  $handler->display->display_options['fields']['field_exhibit_sub_case_grouping']['id'] = 'field_exhibit_sub_case_grouping';
+  $handler->display->display_options['fields']['field_exhibit_sub_case_grouping']['table'] = 'field_data_field_exhibit_sub_case_grouping';
+  $handler->display->display_options['fields']['field_exhibit_sub_case_grouping']['field'] = 'field_exhibit_sub_case_grouping';
+  $handler->display->display_options['fields']['field_exhibit_sub_case_grouping']['label'] = 'Sub Case';
+  $handler->display->display_options['fields']['field_exhibit_sub_case_grouping']['settings'] = array(
+    'link' => 1,
+  );
   /* Field: Content: Image One */
   $handler->display->display_options['fields']['field_exhibit_image_one']['id'] = 'field_exhibit_image_one';
   $handler->display->display_options['fields']['field_exhibit_image_one']['table'] = 'field_data_field_exhibit_image_one';
@@ -366,7 +381,7 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Description */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -374,6 +389,17 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['element_wrapper_type'] = 'p';
+  /* Field: Content: Source */
+  $handler->display->display_options['fields']['field_exhibit_item_source']['id'] = 'field_exhibit_item_source';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['table'] = 'field_data_field_exhibit_item_source';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['field'] = 'field_exhibit_item_source';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['relationship'] = 'reverse_field_exhibit_sub_case_grouping_node';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_item_source']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_item_source']['alter']['text'] = '([field_exhibit_item_source])';
+  $handler->display->display_options['fields']['field_exhibit_item_source']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_exhibit_item_source']['type'] = 'text_plain';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
@@ -420,6 +446,8 @@ function exhibit_views_and_page_handlers_views_default_views() {
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['field'] = 'field_exhibit_image_one_caption';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['relationship'] = 'reverse_field_exhibit_sub_case_grouping_node';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['label'] = '';
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_exhibit_image_one_caption']['alter']['text'] = '[field_exhibit_image_one_caption] [field_exhibit_item_source]';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_exhibit_image_one_caption']['element_wrapper_class'] = 'caption';

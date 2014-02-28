@@ -37,7 +37,7 @@ function exhibit_content_types_taxonomies_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Description',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'display_summary' => 1,
       'text_processing' => 1,
