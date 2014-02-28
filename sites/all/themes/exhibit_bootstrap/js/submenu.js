@@ -1,7 +1,7 @@
 (function ($) {
   $(document).ready(function() {
    
-   $( '<button type="button" class="btn btn-default btn-lg active menu-button">Exhibition Cases <span class="glyphicon glyphicon-align-justify"></span></button>' ).prependTo( '.pane-menu-menu-exhibit-top-level-case-menu' );
+   $( '<button type="button" class="btn btn-default btn-lg active menu-button">Exhibition Menu<span class="glyphicon glyphicon-align-justify"></span></button>' ).prependTo( '.pane-menu-menu-exhibit-top-level-case-menu' );
    
    if (document.body.clientWidth < 768) {
         
