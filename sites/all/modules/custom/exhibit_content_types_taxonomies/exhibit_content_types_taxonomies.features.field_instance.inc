@@ -690,7 +690,7 @@ function exhibit_content_types_taxonomies_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
