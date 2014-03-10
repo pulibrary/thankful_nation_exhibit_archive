@@ -348,6 +348,7 @@ function exhibit_curator_permissions_user_default_permissions() {
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
+      'Curator' => 'Curator',
       'administrator' => 'administrator',
     ),
     'module' => 'system',
