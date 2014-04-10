@@ -84,6 +84,13 @@
     margin: 20px 75px 0px 75px;
 }
 
+.node-type-exhibit-rbsc-item .pane-node-body p {
+    font-family: "Alice",serif;
+    font-size: 14px;
+    line-height: 1.4em;
+    color: #222;
+    margin: 20px 0px;
+}
 .panel-2col .panel-col-first {
     float: left;
     width: 25%;
